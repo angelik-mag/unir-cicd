@@ -24,7 +24,7 @@ test-api:
 	docker network rm calc-test-api || true
 
 test-e2e:
-	docker network create calc-test-e2e || true
+	if docker container inspect apiserver >/dev/null 2>&1;then docker network create calc-test-e2e || true fi
 	docker stop apiserver || true
 	docker rm --force apiserver || true
 	docker stop calc-web || true
