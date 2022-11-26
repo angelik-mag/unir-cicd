@@ -24,7 +24,7 @@ test-api:
 	docker network rm calc-test-api || true
 
 test-e2e:
-	sudo apt upgrade
+	
 	echo "inicia configuracion"
 	docker network create calc-test-e2e || true
 	docker pull cypress/included:11.2.0
