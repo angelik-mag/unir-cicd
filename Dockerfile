@@ -1,5 +1,6 @@
 FROM python:3.6-slim
 
+RUN apt upgrade
 RUN mkdir -p /opt/calc
 
 WORKDIR /opt/calc
