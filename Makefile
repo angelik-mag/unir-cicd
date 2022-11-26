@@ -24,9 +24,7 @@ test-api:
 	docker network rm calc-test-api || true
 
 test-e2e:
-	if docker network create calc-test-e2e >/dev/null 2>&1; then 
-		echo "Red creada"
-	fi
+	docker network create calc-test-e2e || true >/dev/null
 	
 	 docker stop apiserver || true
 	 docker rm --force apiserver || true
